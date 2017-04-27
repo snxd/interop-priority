@@ -7,13 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAF6D1A01488292300D83284 /* emptyinterop.c in Sources */ = {isa = PBXBuildFile; fileRef = AAF6D19F1488292300D83284 /* emptyinterop.c */; };
+		AAF6D1A01488292300D83284 /* priorityinterop.c in Sources */ = {isa = PBXBuildFile; fileRef = AAF6D19F1488292300D83284 /* priorityinterop.c */; };
+		D867CDD41EB29AF300F7CEF7 /* interoplib.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDD21EB29AF300F7CEF7 /* interoplib.h */; };
+		D867CDD51EB29AF300F7CEF7 /* interopstub.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDD31EB29AF300F7CEF7 /* interopstub.h */; };
+		D867CDEA1EB29B0A00F7CEF7 /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDD81EB29B0A00F7CEF7 /* dump.c */; };
+		D867CDEB1EB29B0A00F7CEF7 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDD91EB29B0A00F7CEF7 /* error.c */; };
+		D867CDEC1EB29B0A00F7CEF7 /* hashtable_seed.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDDA1EB29B0A00F7CEF7 /* hashtable_seed.c */; };
+		D867CDED1EB29B0A00F7CEF7 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDDB1EB29B0A00F7CEF7 /* hashtable.c */; };
+		D867CDEE1EB29B0A00F7CEF7 /* hashtable.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDDC1EB29B0A00F7CEF7 /* hashtable.h */; };
+		D867CDEF1EB29B0A00F7CEF7 /* jansson_config.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDDD1EB29B0A00F7CEF7 /* jansson_config.h */; };
+		D867CDF01EB29B0A00F7CEF7 /* jansson_private.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDDE1EB29B0A00F7CEF7 /* jansson_private.h */; };
+		D867CDF11EB29B0A00F7CEF7 /* jansson.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDDF1EB29B0A00F7CEF7 /* jansson.h */; };
+		D867CDF21EB29B0A00F7CEF7 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE01EB29B0A00F7CEF7 /* load.c */; };
+		D867CDF31EB29B0A00F7CEF7 /* lookup3.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDE11EB29B0A00F7CEF7 /* lookup3.h */; };
+		D867CDF41EB29B0A00F7CEF7 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE21EB29B0A00F7CEF7 /* memory.c */; };
+		D867CDF51EB29B0A00F7CEF7 /* pack_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE31EB29B0A00F7CEF7 /* pack_unpack.c */; };
+		D867CDF61EB29B0A00F7CEF7 /* strbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE41EB29B0A00F7CEF7 /* strbuffer.c */; };
+		D867CDF71EB29B0A00F7CEF7 /* strbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDE51EB29B0A00F7CEF7 /* strbuffer.h */; };
+		D867CDF81EB29B0A00F7CEF7 /* strconv.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE61EB29B0A00F7CEF7 /* strconv.c */; };
+		D867CDF91EB29B0A00F7CEF7 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE71EB29B0A00F7CEF7 /* utf.c */; };
+		D867CDFA1EB29B0A00F7CEF7 /* utf.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDE81EB29B0A00F7CEF7 /* utf.h */; };
+		D867CDFB1EB29B0A00F7CEF7 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE91EB29B0A00F7CEF7 /* value.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAF6D1821488272000D83284 /* libempty.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libempty.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF6D19F1488292300D83284 /* emptyinterop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emptyinterop.c; path = ../emptyinterop.c; sourceTree = "<group>"; };
-		AAF6D1A11488292F00D83284 /* empty.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty.def; sourceTree = "<group>"; };
+		AAF6D1821488272000D83284 /* libpriority.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libpriority.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF6D19F1488292300D83284 /* priorityinterop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = priorityinterop.c; path = ../priorityinterop.c; sourceTree = "<group>"; };
+		AAF6D1A11488292F00D83284 /* priority.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = priority.def; sourceTree = "<group>"; };
+		D867CDD21EB29AF300F7CEF7 /* interoplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interoplib.h; path = ../interop/interoplib.h; sourceTree = "<group>"; };
+		D867CDD31EB29AF300F7CEF7 /* interopstub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interopstub.h; path = ../interop/interopstub.h; sourceTree = "<group>"; };
+		D867CDD81EB29B0A00F7CEF7 /* dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dump.c; path = ../jansson/dump.c; sourceTree = "<group>"; };
+		D867CDD91EB29B0A00F7CEF7 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = error.c; path = ../jansson/error.c; sourceTree = "<group>"; };
+		D867CDDA1EB29B0A00F7CEF7 /* hashtable_seed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashtable_seed.c; path = ../jansson/hashtable_seed.c; sourceTree = "<group>"; };
+		D867CDDB1EB29B0A00F7CEF7 /* hashtable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashtable.c; path = ../jansson/hashtable.c; sourceTree = "<group>"; };
+		D867CDDC1EB29B0A00F7CEF7 /* hashtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashtable.h; path = ../jansson/hashtable.h; sourceTree = "<group>"; };
+		D867CDDD1EB29B0A00F7CEF7 /* jansson_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson_config.h; path = ../jansson/jansson_config.h; sourceTree = "<group>"; };
+		D867CDDE1EB29B0A00F7CEF7 /* jansson_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson_private.h; path = ../jansson/jansson_private.h; sourceTree = "<group>"; };
+		D867CDDF1EB29B0A00F7CEF7 /* jansson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson.h; path = ../jansson/jansson.h; sourceTree = "<group>"; };
+		D867CDE01EB29B0A00F7CEF7 /* load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = load.c; path = ../jansson/load.c; sourceTree = "<group>"; };
+		D867CDE11EB29B0A00F7CEF7 /* lookup3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lookup3.h; path = ../jansson/lookup3.h; sourceTree = "<group>"; };
+		D867CDE21EB29B0A00F7CEF7 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory.c; path = ../jansson/memory.c; sourceTree = "<group>"; };
+		D867CDE31EB29B0A00F7CEF7 /* pack_unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pack_unpack.c; path = ../jansson/pack_unpack.c; sourceTree = "<group>"; };
+		D867CDE41EB29B0A00F7CEF7 /* strbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strbuffer.c; path = ../jansson/strbuffer.c; sourceTree = "<group>"; };
+		D867CDE51EB29B0A00F7CEF7 /* strbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = strbuffer.h; path = ../jansson/strbuffer.h; sourceTree = "<group>"; };
+		D867CDE61EB29B0A00F7CEF7 /* strconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strconv.c; path = ../jansson/strconv.c; sourceTree = "<group>"; };
+		D867CDE71EB29B0A00F7CEF7 /* utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utf.c; path = ../jansson/utf.c; sourceTree = "<group>"; };
+		D867CDE81EB29B0A00F7CEF7 /* utf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf.h; path = ../jansson/utf.h; sourceTree = "<group>"; };
+		D867CDE91EB29B0A00F7CEF7 /* value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = value.c; path = ../jansson/value.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +70,8 @@
 		AAF6D1771488272000D83284 = {
 			isa = PBXGroup;
 			children = (
+				D867CDD11EB29AE700F7CEF7 /* Interop */,
+				D867CDD61EB29AF600F7CEF7 /* Jansson */,
 				AAF6D196148827BB00D83284 /* Sources */,
 				AAF6D1831488272000D83284 /* Products */,
 			);
@@ -38,7 +80,7 @@
 		AAF6D1831488272000D83284 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAF6D1821488272000D83284 /* libempty.dylib */,
+				AAF6D1821488272000D83284 /* libpriority.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +88,44 @@
 		AAF6D196148827BB00D83284 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AAF6D19F1488292300D83284 /* emptyinterop.c */,
-				AAF6D1A11488292F00D83284 /* empty.def */,
+				AAF6D19F1488292300D83284 /* priorityinterop.c */,
+				AAF6D1A11488292F00D83284 /* priority.def */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		D867CDD11EB29AE700F7CEF7 /* Interop */ = {
+			isa = PBXGroup;
+			children = (
+				D867CDD21EB29AF300F7CEF7 /* interoplib.h */,
+				D867CDD31EB29AF300F7CEF7 /* interopstub.h */,
+			);
+			name = Interop;
+			sourceTree = "<group>";
+		};
+		D867CDD61EB29AF600F7CEF7 /* Jansson */ = {
+			isa = PBXGroup;
+			children = (
+				D867CDD81EB29B0A00F7CEF7 /* dump.c */,
+				D867CDD91EB29B0A00F7CEF7 /* error.c */,
+				D867CDDA1EB29B0A00F7CEF7 /* hashtable_seed.c */,
+				D867CDDB1EB29B0A00F7CEF7 /* hashtable.c */,
+				D867CDDC1EB29B0A00F7CEF7 /* hashtable.h */,
+				D867CDDD1EB29B0A00F7CEF7 /* jansson_config.h */,
+				D867CDDE1EB29B0A00F7CEF7 /* jansson_private.h */,
+				D867CDDF1EB29B0A00F7CEF7 /* jansson.h */,
+				D867CDE01EB29B0A00F7CEF7 /* load.c */,
+				D867CDE11EB29B0A00F7CEF7 /* lookup3.h */,
+				D867CDE21EB29B0A00F7CEF7 /* memory.c */,
+				D867CDE31EB29B0A00F7CEF7 /* pack_unpack.c */,
+				D867CDE41EB29B0A00F7CEF7 /* strbuffer.c */,
+				D867CDE51EB29B0A00F7CEF7 /* strbuffer.h */,
+				D867CDE61EB29B0A00F7CEF7 /* strconv.c */,
+				D867CDE71EB29B0A00F7CEF7 /* utf.c */,
+				D867CDE81EB29B0A00F7CEF7 /* utf.h */,
+				D867CDE91EB29B0A00F7CEF7 /* value.c */,
+			);
+			name = Jansson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,15 +135,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D867CDD51EB29AF300F7CEF7 /* interopstub.h in Headers */,
+				D867CDF31EB29B0A00F7CEF7 /* lookup3.h in Headers */,
+				D867CDF01EB29B0A00F7CEF7 /* jansson_private.h in Headers */,
+				D867CDFA1EB29B0A00F7CEF7 /* utf.h in Headers */,
+				D867CDD41EB29AF300F7CEF7 /* interoplib.h in Headers */,
+				D867CDF71EB29B0A00F7CEF7 /* strbuffer.h in Headers */,
+				D867CDF11EB29B0A00F7CEF7 /* jansson.h in Headers */,
+				D867CDEE1EB29B0A00F7CEF7 /* hashtable.h in Headers */,
+				D867CDEF1EB29B0A00F7CEF7 /* jansson_config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AAF6D1811488272000D83284 /* empty */ = {
+		AAF6D1811488272000D83284 /* priority */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAF6D1861488272000D83284 /* Build configuration list for PBXNativeTarget "empty" */;
+			buildConfigurationList = AAF6D1861488272000D83284 /* Build configuration list for PBXNativeTarget "priority" */;
 			buildPhases = (
 				AAF6D17E1488272000D83284 /* Sources */,
 				AAF6D17F1488272000D83284 /* Frameworks */,
@@ -77,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = empty;
-			productName = emptyinterop;
-			productReference = AAF6D1821488272000D83284 /* libempty.dylib */;
+			name = priority;
+			productName = priorityinterop;
+			productReference = AAF6D1821488272000D83284 /* libpriority.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +176,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = None;
 			};
-			buildConfigurationList = AAF6D17C1488272000D83284 /* Build configuration list for PBXProject "empty" */;
+			buildConfigurationList = AAF6D17C1488272000D83284 /* Build configuration list for PBXProject "priority" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -103,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAF6D1811488272000D83284 /* empty */,
+				AAF6D1811488272000D83284 /* priority */,
 			);
 		};
 /* End PBXProject section */
@@ -113,7 +198,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF6D1A01488292300D83284 /* emptyinterop.c in Sources */,
+				D867CDF91EB29B0A00F7CEF7 /* utf.c in Sources */,
+				D867CDF41EB29B0A00F7CEF7 /* memory.c in Sources */,
+				D867CDEB1EB29B0A00F7CEF7 /* error.c in Sources */,
+				D867CDF21EB29B0A00F7CEF7 /* load.c in Sources */,
+				D867CDF61EB29B0A00F7CEF7 /* strbuffer.c in Sources */,
+				D867CDEC1EB29B0A00F7CEF7 /* hashtable_seed.c in Sources */,
+				D867CDED1EB29B0A00F7CEF7 /* hashtable.c in Sources */,
+				AAF6D1A01488292300D83284 /* priorityinterop.c in Sources */,
+				D867CDF51EB29B0A00F7CEF7 /* pack_unpack.c in Sources */,
+				D867CDFB1EB29B0A00F7CEF7 /* value.c in Sources */,
+				D867CDEA1EB29B0A00F7CEF7 /* dump.c in Sources */,
+				D867CDF81EB29B0A00F7CEF7 /* strconv.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +236,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../interop/,
+					../jansson/,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -160,6 +260,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../interop/,
+					../jansson/,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -169,12 +273,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
-				EXPORTED_SYMBOLS_FILE = "${PROJECT_DIR}/empty.def";
+				EXPORTED_SYMBOLS_FILE = "${PROJECT_DIR}/priority.def";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = ../interop;
 				OTHER_LDFLAGS = (
 					"-exported_symbols_list",
-					empty.def,
+					priority.def,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -184,12 +288,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
-				EXPORTED_SYMBOLS_FILE = "${PROJECT_DIR}/empty.def";
+				EXPORTED_SYMBOLS_FILE = "${PROJECT_DIR}/priority.def";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = ../interop;
 				OTHER_LDFLAGS = (
 					"-exported_symbols_list",
-					empty.def,
+					priority.def,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -198,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAF6D17C1488272000D83284 /* Build configuration list for PBXProject "empty" */ = {
+		AAF6D17C1488272000D83284 /* Build configuration list for PBXProject "priority" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAF6D1841488272000D83284 /* Debug */,
@@ -207,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAF6D1861488272000D83284 /* Build configuration list for PBXNativeTarget "empty" */ = {
+		AAF6D1861488272000D83284 /* Build configuration list for PBXNativeTarget "priority" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAF6D1871488272000D83284 /* Debug */,
