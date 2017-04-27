@@ -35,14 +35,14 @@ int32 Interop_SetOverride(char *Key, void *Value)
     return TRUE;
 }
 
-int32 Interop_SetOption(char *Key, char *Value)
+int32 Interop_SetOption(char *Key, void *Value)
 {
     return TRUE;
 }
 
 /*********************************************************************/
 
-static int32 Interop_Notification_OnRegisterTaskHandler(void *UserPtr, char *Type, char *Notification, char *Sender, echandle DictionaryHandle)
+static int32 Interop_Notification_OnRegisterTaskHandler(void *UserPtr, char *Type, char *Notification, void *Sender, echandle DictionaryHandle)
 {
     echandle WorkflowHandle = NULL;
     WorkflowHandle = Class_ConvertFromInstanceId(Sender);
@@ -54,7 +54,7 @@ static int32 Interop_Notification_OnRegisterTaskHandler(void *UserPtr, char *Typ
 
 /*********************************************************************/
 
-static int32 Interop_Notification_OnUnregisterTaskHandler(void *UserPtr, char *Type, char *Notification, char *Sender, echandle DictionaryHandle)
+static int32 Interop_Notification_OnUnregisterTaskHandler(void *UserPtr, char *Type, char *Notification, void *Sender, echandle DictionaryHandle)
 {
     echandle WorkflowHandle = NULL;
     WorkflowHandle = Class_ConvertFromInstanceId(Sender);

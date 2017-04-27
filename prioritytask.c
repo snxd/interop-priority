@@ -1,13 +1,12 @@
 #include "interoplib.h"
-
+#include "taski.h"
+#include "workflowi.h"
 
 #include <stdlib.h>
 #include <string.h>
 
-#include "taski.h"
-#include "workflowi.h"
-
 #include "priority.h"
+#include "prioritytask.h"
 
 /*********************************************************************/
 
@@ -47,7 +46,8 @@ int32 PriorityTask_Create(echandle *PriorityTaskHandle, echandle TaskHandle)
 
     PriorityTask = (PriorityTaskStruct *)malloc(sizeof(PriorityTaskStruct));
     Interop_GenerateInstanceId(PriorityTask->Class.InstanceId, 40);
-
+    PriorityTask->Class.Id = GlobalPriorityTaskStructClassId;
+    
     PriorityTask->TaskHandle = TaskHandle;
     NotificationCenter_AddInstanceObserver("Task", "Start", PriorityTask->TaskHandle, PriorityTask, PriorityTask_Notification_OnTaskStart);
 

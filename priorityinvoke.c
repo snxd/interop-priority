@@ -11,9 +11,6 @@ int32 Priority_Invoke(echandle PriorityHandle, char *String, char *ResultString,
 {
     char *MethodName = NULL;
     char MethodResultString[MAX_JSON_STRINGLENGTH];
-    int64 MethodResultInt = 0;
-    float64 MethodResultDbl = 0;
-    int32 MethodResultBool = 0;
     char *JSONDumpString = NULL;
     json_t *JSON = NULL;
     json_t *JSONReturnRoot = NULL;

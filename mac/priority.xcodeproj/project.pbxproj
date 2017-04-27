@@ -28,6 +28,14 @@
 		D867CDF91EB29B0A00F7CEF7 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE71EB29B0A00F7CEF7 /* utf.c */; };
 		D867CDFA1EB29B0A00F7CEF7 /* utf.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CDE81EB29B0A00F7CEF7 /* utf.h */; };
 		D867CDFB1EB29B0A00F7CEF7 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CDE91EB29B0A00F7CEF7 /* value.c */; };
+		D867CE221EB2B68700F7CEF7 /* priority.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CE211EB2B68700F7CEF7 /* priority.c */; };
+		D867CE271EB2B69700F7CEF7 /* priority.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE231EB2B69700F7CEF7 /* priority.h */; };
+		D867CE281EB2B69700F7CEF7 /* priorityinvoke.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CE241EB2B69700F7CEF7 /* priorityinvoke.c */; };
+		D867CE291EB2B69700F7CEF7 /* prioritytask.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CE251EB2B69700F7CEF7 /* prioritytask.c */; };
+		D867CE2A1EB2B69700F7CEF7 /* prioritytask.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE261EB2B69700F7CEF7 /* prioritytask.h */; };
+		D867CE2E1EB2B6D900F7CEF7 /* interoplib.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */; };
+		D867CE2F1EB2B6D900F7CEF7 /* taski.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE2C1EB2B6D900F7CEF7 /* taski.h */; };
+		D867CE301EB2B6D900F7CEF7 /* workflowi.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE2D1EB2B6D900F7CEF7 /* workflowi.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,14 @@
 		D867CDE71EB29B0A00F7CEF7 /* utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utf.c; path = ../jansson/utf.c; sourceTree = "<group>"; };
 		D867CDE81EB29B0A00F7CEF7 /* utf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf.h; path = ../jansson/utf.h; sourceTree = "<group>"; };
 		D867CDE91EB29B0A00F7CEF7 /* value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = value.c; path = ../jansson/value.c; sourceTree = "<group>"; };
+		D867CE211EB2B68700F7CEF7 /* priority.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = priority.c; sourceTree = "<group>"; };
+		D867CE231EB2B69700F7CEF7 /* priority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = priority.h; path = ../priority.h; sourceTree = "<group>"; };
+		D867CE241EB2B69700F7CEF7 /* priorityinvoke.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = priorityinvoke.c; path = ../priorityinvoke.c; sourceTree = "<group>"; };
+		D867CE251EB2B69700F7CEF7 /* prioritytask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = prioritytask.c; path = ../prioritytask.c; sourceTree = "<group>"; };
+		D867CE261EB2B69700F7CEF7 /* prioritytask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prioritytask.h; path = ../prioritytask.h; sourceTree = "<group>"; };
+		D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = interoplib.c; path = ../interop/interoplib.c; sourceTree = "<group>"; };
+		D867CE2C1EB2B6D900F7CEF7 /* taski.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taski.h; path = ../interop/taski.h; sourceTree = "<group>"; };
+		D867CE2D1EB2B6D900F7CEF7 /* workflowi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = workflowi.h; path = ../interop/workflowi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +104,11 @@
 		AAF6D196148827BB00D83284 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D867CE231EB2B69700F7CEF7 /* priority.h */,
+				D867CE241EB2B69700F7CEF7 /* priorityinvoke.c */,
+				D867CE251EB2B69700F7CEF7 /* prioritytask.c */,
+				D867CE261EB2B69700F7CEF7 /* prioritytask.h */,
+				D867CE211EB2B68700F7CEF7 /* priority.c */,
 				AAF6D19F1488292300D83284 /* priorityinterop.c */,
 				AAF6D1A11488292F00D83284 /* priority.def */,
 			);
@@ -97,8 +118,11 @@
 		D867CDD11EB29AE700F7CEF7 /* Interop */ = {
 			isa = PBXGroup;
 			children = (
+				D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */,
 				D867CDD21EB29AF300F7CEF7 /* interoplib.h */,
 				D867CDD31EB29AF300F7CEF7 /* interopstub.h */,
+				D867CE2C1EB2B6D900F7CEF7 /* taski.h */,
+				D867CE2D1EB2B6D900F7CEF7 /* workflowi.h */,
 			);
 			name = Interop;
 			sourceTree = "<group>";
@@ -137,11 +161,15 @@
 			files = (
 				D867CDD51EB29AF300F7CEF7 /* interopstub.h in Headers */,
 				D867CDF31EB29B0A00F7CEF7 /* lookup3.h in Headers */,
+				D867CE271EB2B69700F7CEF7 /* priority.h in Headers */,
 				D867CDF01EB29B0A00F7CEF7 /* jansson_private.h in Headers */,
 				D867CDFA1EB29B0A00F7CEF7 /* utf.h in Headers */,
 				D867CDD41EB29AF300F7CEF7 /* interoplib.h in Headers */,
 				D867CDF71EB29B0A00F7CEF7 /* strbuffer.h in Headers */,
+				D867CE2A1EB2B69700F7CEF7 /* prioritytask.h in Headers */,
 				D867CDF11EB29B0A00F7CEF7 /* jansson.h in Headers */,
+				D867CE301EB2B6D900F7CEF7 /* workflowi.h in Headers */,
+				D867CE2F1EB2B6D900F7CEF7 /* taski.h in Headers */,
 				D867CDEE1EB29B0A00F7CEF7 /* hashtable.h in Headers */,
 				D867CDEF1EB29B0A00F7CEF7 /* jansson_config.h in Headers */,
 			);
@@ -203,13 +231,17 @@
 				D867CDEB1EB29B0A00F7CEF7 /* error.c in Sources */,
 				D867CDF21EB29B0A00F7CEF7 /* load.c in Sources */,
 				D867CDF61EB29B0A00F7CEF7 /* strbuffer.c in Sources */,
+				D867CE2E1EB2B6D900F7CEF7 /* interoplib.c in Sources */,
 				D867CDEC1EB29B0A00F7CEF7 /* hashtable_seed.c in Sources */,
 				D867CDED1EB29B0A00F7CEF7 /* hashtable.c in Sources */,
 				AAF6D1A01488292300D83284 /* priorityinterop.c in Sources */,
+				D867CE291EB2B69700F7CEF7 /* prioritytask.c in Sources */,
 				D867CDF51EB29B0A00F7CEF7 /* pack_unpack.c in Sources */,
 				D867CDFB1EB29B0A00F7CEF7 /* value.c in Sources */,
 				D867CDEA1EB29B0A00F7CEF7 /* dump.c in Sources */,
 				D867CDF81EB29B0A00F7CEF7 /* strconv.c in Sources */,
+				D867CE221EB2B68700F7CEF7 /* priority.c in Sources */,
+				D867CE281EB2B69700F7CEF7 /* priorityinvoke.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

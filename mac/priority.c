@@ -1,5 +1,4 @@
-#include "emu-core.h"
-#include "emu-str.h"
+#include "interoplib.h"
 
 #include <sys/resource.h>
 #include <limits.h>
@@ -19,21 +18,21 @@
 int32 Priority_SetLow(void)
 {
     int32 Result = setpriority(PRIO_PROCESS, 0, IDLE_PRIORITY_LOW);
-    Debug_Print("Current process priority set to Low (%d)\n", Result);
+    printf("Current process priority set to Low (%d)\n", Result);
     return TRUE;
 }
 
 int32 Priority_SetNormal(void)
 {
     int32 Result = setpriority(PRIO_PROCESS, 0, IDLE_PRIORITY_NORMAL);
-    Debug_Print("Current process priority set to Normal (%d)\n", Result);
+    printf("Current process priority set to Normal (%d)\n", Result);
     return TRUE;
 }
 
 int32 Priority_SetHigh(void)
 {
     int32 Result = setpriority(PRIO_PROCESS, 0, IDLE_PRIORITY_HIGH);
-    Debug_Print("Current process priority set to High (%d)\n", Result);
+    printf("Current process priority set to High (%d)\n", Result);
     return TRUE;
 }
 
