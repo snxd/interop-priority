@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{34218230-f433-411e-91ae-ba78bfbd5f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Jansson">
+      <UniqueIdentifier>{c3a8740a-242e-4754-9de8-db140429627a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\jansson\dump.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\error.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\hashtable.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\hashtable_seed.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\load.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\memory.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\pack_unpack.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\strbuffer.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\strconv.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\utf.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jansson\value.c">
+      <Filter>Jansson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\priorityinterop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interop\interoplib.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\priorityinvoke.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\prioritytask.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="priority.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="priority.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\interop\interoplib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interop\interopstub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\hashtable.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\jansson.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\jansson_config.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\jansson_private.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\lookup3.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\strbuffer.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jansson\utf.h">
+      <Filter>Jansson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\prioritytask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\priority.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

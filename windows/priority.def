@@ -1,0 +1,6 @@
+EXPORTS
+Interop_CreateInstance
+Interop_SetOverride
+Interop_SetOption
+Interop_Load
+Interop_Unload
