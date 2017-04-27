@@ -1,5 +1,7 @@
 #include "interoplib.h"
 
+#include <stdarg.h>
+
 /*********************************************************************/
 
 #define NOTIFICATIONCENTER_GLOBALSENDER ("Global")
@@ -14,7 +16,9 @@ Class_UntrackInstanceCallback       Class_UntrackInstancePtr = NULL;
 NotificationCenter_AddInstanceObserverCallback      NotificationCenter_AddInstanceObserverPtr = NULL;
 NotificationCenter_RemoveInstanceObserverCallback   NotificationCenter_RemoveInstanceObserverPtr = NULL;
 NotificationCenter_FireWithJSONCallback             NotificationCenter_FireWithJSONPtr = NULL;
+NotificationCenter_FireWithJSONVCallback            NotificationCenter_FireWithJSONVPtr = NULL;
 NotificationCenter_FireAfterDelayWithJSONCallback   NotificationCenter_FireAfterDelayWithJSONPtr = NULL;
+NotificationCenter_FireAfterDelayWithJSONVCallback  NotificationCenter_FireAfterDelayWithJSONVPtr = NULL;
 
 Interop_GenerateInstanceIdCallback  Interop_GenerateInstanceIdPtr = NULL;
 
@@ -37,8 +41,12 @@ int32 InteropLib_SetOverride(char *Key, void *Value)
         NotificationCenter_RemoveInstanceObserverPtr = (NotificationCenter_RemoveInstanceObserverCallback)Value;
     else if (String_Compare(Key, "NotificationCenter_FireWithJSON") == TRUE)
         NotificationCenter_FireWithJSONPtr = (NotificationCenter_FireWithJSONCallback)Value;
+    else if (String_Compare(Key, "NotificationCenter_FireWithJSONV") == TRUE)
+        NotificationCenter_FireWithJSONVPtr = (NotificationCenter_FireWithJSONVCallback)Value;
     else if (String_Compare(Key, "NotificationCenter_FireAfterDelayWithJSON") == TRUE)
         NotificationCenter_FireAfterDelayWithJSONPtr = (NotificationCenter_FireAfterDelayWithJSONCallback)Value;
+    else if (String_Compare(Key, "NotificationCenter_FireAfterDelayWithJSONV") == TRUE)
+        NotificationCenter_FireAfterDelayWithJSONVPtr = (NotificationCenter_FireAfterDelayWithJSONVCallback)Value;
 
     if (String_Compare(Key, "Interop_GenerateInstanceId") == TRUE)
         Interop_GenerateInstanceIdPtr = (Interop_GenerateInstanceIdCallback)Value;
@@ -87,17 +95,26 @@ int32 NotificationCenter_RemoveInstanceObserver(char *Type, char *Notification, 
 {
     return NotificationCenter_RemoveInstanceObserverPtr(Type, Notification, Sender, UserPtr, Callback);
 }
-/*
+
 int32 NotificationCenter_FireWithJSON(char *Type, char *Notification, void *Sender, char *Format, ...)
 {
-    return NotificationCenter_FireWithJSONPtr(Type, Notification, Sender, Format, ...);
+    va_list ArgumentList;
+    int32 RetVal = FALSE;
+    va_start(ArgumentList, Format);
+    RetVal = NotificationCenter_FireWithJSONVPtr(Type, Notification, Sender, Format, ArgumentList);
+    va_end(ArgumentList);
+    return RetVal;
 }
 
 int32 NotificationCenter_FireAfterDelayWithJSON(char *Type, char *Notification, void *Sender, int32 DelayMS, char *Format, ...)
 {
-    return NotificationCenter_FireAfterDelayWithJSONPtr(Type, Notification, Sender, DelayMS, Format, ...);
+    va_list ArgumentList;
+    int32 RetVal = FALSE;
+    va_start(ArgumentList, Format);
+    RetVal = NotificationCenter_FireAfterDelayWithJSONVPtr(Type, Notification, Sender, DelayMS, Format, ArgumentList);
+    va_end(ArgumentList);
+    return RetVal;
 }
-*/
 
 int32 Interop_GenerateInstanceId(char *String, int32 MaxString)
 {

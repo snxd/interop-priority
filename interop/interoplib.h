@@ -104,8 +104,10 @@ typedef int32 (*NotificationCenter_RemoveInstanceObserverCallback)(char *Type, c
 typedef int32 (*NotificationCenter_AssertInstanceCallback)(void *Sender);
 typedef int32 (*NotificationCenter_FireCallback)(char *Type, char *Notification, void *Sender, echandle DictionaryHandle);
 typedef int32 (*NotificationCenter_FireWithJSONCallback)(char *Type, char *Notification, void *Sender, char *Format, ...);
+typedef int32 (*NotificationCenter_FireWithJSONVCallback)(char *Type, char *Notification, void *Sender, char *Format, va_list ArgumentList);
 typedef int32 (*NotificationCenter_FireAfterDelayCallback)(char *Type, char *Notification, void *Sender, int32 DelayMS, echandle DictionaryHandle);
 typedef int32 (*NotificationCenter_FireAfterDelayWithJSONCallback)(char *Type, char *Notification, void *Sender, int32 DelayMS, char *Format, ...);
+typedef int32 (*NotificationCenter_FireAfterDelayWithJSONVCallback)(char *Type, char *Notification, void *Sender, int32 DelayMS, char *Format, va_list ArgumentList);
 
 typedef int32 (*Interop_GenerateInstanceIdCallback)(char *String, int32 MaxString);
 typedef int32 (*Interop_ExecuteCallback)(void* UserPtr, char *InstanceId, char *String, char *ResultString, int32 ResultStringLength);
