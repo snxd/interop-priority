@@ -1,7 +1,7 @@
 import qbs;
 
 Product {
-    name: "empty"
+    name: "priority"
     type: [ "dynamiclibrary" ]
     consoleApplication: false
 
@@ -23,14 +23,14 @@ Product {
         ])
         cpp.visibility: "hidden"
         cpp.linkerFlags: base.concat([
-            "-Wl,--retain-symbols-file=" + sourceDirectory + "/empty.def"
+            "-Wl,--retain-symbols-file=" + sourceDirectory + "/priority.def"
         ])
     }
 
     Group {
         name: "exports"
         files: [
-            "empty.def"
+            "priority.def"
         ]
     }
 
@@ -38,16 +38,27 @@ Product {
         name: "sources"
         prefix: "../"
         files: [
-            "emptyinterop.c"
+            "priority.c",
+            "prioritytask.c",
+            "priorityinvoke.c"
         ]
     }
 
+    Group {
+        name: "headers"
+        prefix: "../"
+        files: [
+            "priority.h",
+            "prioritytask.h"
+        ]
+    }
 
     Group {
         name: "interop"
         prefix: "../interop/"
         files: [
             "interoplib.h",
+            "interoplib.c",
             "interopstub.h"
         ]
     }
