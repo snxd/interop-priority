@@ -19,7 +19,8 @@ Product {
         cpp.includePaths: outer.concat([
             "/usr/include/",
             "../jansson/",
-            "../interop/"
+            "../interop/",
+            "../"
         ])
         cpp.visibility: "hidden"
         cpp.linkerFlags: base.concat([
@@ -38,9 +39,15 @@ Product {
         name: "sources"
         prefix: "../"
         files: [
-            "priority.c",
             "prioritytask.c",
             "priorityinvoke.c"
+        ]
+    }
+
+    Group {
+        name: "linux sources"
+        files: [
+            "priority.c"
         ]
     }
 
@@ -57,9 +64,12 @@ Product {
         name: "interop"
         prefix: "../interop/"
         files: [
+            "dictionaryi.h",
             "interoplib.h",
             "interoplib.c",
-            "interopstub.h"
+            "interopstub.h",
+            "workflowi.h",
+            "taski.h"
         ]
     }
 
