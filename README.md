@@ -14,7 +14,7 @@ This is an example interop that shows how to change the priority of the current 
 
 ### Requirements
 
-* Visual Studio 2015
+* Visual Studio 2013
 * Xcode 8
 * QtCreator 5.8
 * DIRECT 5
