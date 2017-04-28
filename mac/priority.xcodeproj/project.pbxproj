@@ -36,6 +36,7 @@
 		D867CE2E1EB2B6D900F7CEF7 /* interoplib.c in Sources */ = {isa = PBXBuildFile; fileRef = D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */; };
 		D867CE2F1EB2B6D900F7CEF7 /* taski.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE2C1EB2B6D900F7CEF7 /* taski.h */; };
 		D867CE301EB2B6D900F7CEF7 /* workflowi.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE2D1EB2B6D900F7CEF7 /* workflowi.h */; };
+		D867CE401EB3B65600F7CEF7 /* dictionaryi.h in Headers */ = {isa = PBXBuildFile; fileRef = D867CE3F1EB3B65600F7CEF7 /* dictionaryi.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = interoplib.c; path = ../interop/interoplib.c; sourceTree = "<group>"; };
 		D867CE2C1EB2B6D900F7CEF7 /* taski.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taski.h; path = ../interop/taski.h; sourceTree = "<group>"; };
 		D867CE2D1EB2B6D900F7CEF7 /* workflowi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = workflowi.h; path = ../interop/workflowi.h; sourceTree = "<group>"; };
+		D867CE3F1EB3B65600F7CEF7 /* dictionaryi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dictionaryi.h; path = ../interop/dictionaryi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,8 @@
 		AAF6D1771488272000D83284 = {
 			isa = PBXGroup;
 			children = (
-				D867CDD11EB29AE700F7CEF7 /* Interop */,
 				D867CDD61EB29AF600F7CEF7 /* Jansson */,
+				D867CDD11EB29AE700F7CEF7 /* Interop */,
 				AAF6D196148827BB00D83284 /* Sources */,
 				AAF6D1831488272000D83284 /* Products */,
 			);
@@ -118,6 +120,7 @@
 		D867CDD11EB29AE700F7CEF7 /* Interop */ = {
 			isa = PBXGroup;
 			children = (
+				D867CE3F1EB3B65600F7CEF7 /* dictionaryi.h */,
 				D867CE2B1EB2B6D900F7CEF7 /* interoplib.c */,
 				D867CDD21EB29AF300F7CEF7 /* interoplib.h */,
 				D867CDD31EB29AF300F7CEF7 /* interopstub.h */,
@@ -159,6 +162,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D867CE401EB3B65600F7CEF7 /* dictionaryi.h in Headers */,
 				D867CDD51EB29AF300F7CEF7 /* interopstub.h in Headers */,
 				D867CDF31EB29B0A00F7CEF7 /* lookup3.h in Headers */,
 				D867CE271EB2B69700F7CEF7 /* priority.h in Headers */,
