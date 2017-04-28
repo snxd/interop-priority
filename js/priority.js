@@ -55,7 +55,6 @@ function createPriority(instanceId) {
 interop.on("libraryLoad", function(info) {
     if (info.name.toLowerCase() == "priority") {
         window.priority = createPriority();
-        window.priority.setHigh();
     }
 });
 interop.on("libraryUnload", function(info) {
