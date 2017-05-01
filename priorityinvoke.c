@@ -10,7 +10,7 @@
 int32 Priority_Invoke(echandle PriorityHandle, char *String, char *ResultString, int32 ResultStringLength)
 {
     char *MethodName = NULL;
-    char MethodResultString[MAX_JSON_STRINGLENGTH];
+    char MethodResultString[INTEROP_MAXSTRING];
     char *JSONDumpString = NULL;
     json_t *JSON = NULL;
     json_t *JSONReturnRoot = NULL;
@@ -19,7 +19,7 @@ int32 Priority_Invoke(echandle PriorityHandle, char *String, char *ResultString,
     json_error_t JSONError;
     int32 RetVal = FALSE;
 
-    memset(MethodResultString, 0, MAX_JSON_STRINGLENGTH);
+    memset(MethodResultString, 0, INTEROP_MAXSTRING);
     JSON = json_loads(String, 0, &JSONError);
     if (JSON == FALSE)
         return FALSE;
