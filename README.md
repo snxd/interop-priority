@@ -4,13 +4,13 @@ This is an example interop that shows how to change the priority of the current 
 
 ### Contents 
 
-* bin/ - Priority interop dlls
+* bin - Priority interop dlls
 * js/priority.js - Javascript priority object
-* interop/ - DIRECT interop headers
-* jansson/ - Jansson javascript parser
-* mac/ - Xcode project files
-* linux/ - QtCreator project files
-* windows/ - Windows project files
+* interop - DIRECT interop headers
+* jansson - Jansson javascript parser
+* mac - Xcode project files
+* linux - QtCreator project files
+* windows - Windows project files
 
 ### Requirements
 
