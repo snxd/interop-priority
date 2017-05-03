@@ -27,13 +27,13 @@ This is an example interop that shows how to change the priority of the current 
     "loadPriority": {
         "type": "interopLoad",
         "name": "priority",
-        "path": "{ModulePath}{LibraryPrefix}priority.{LibraryExtension}"
+        "path": "{ModuleDirectory}{LibraryPrefix}priority.{LibraryExtension}"
     },```
 4. Edit workflow.json and add the following task to be run in the unload entry point: ```
     "unloadPriority": {
         "type": "interopUnload",
         "name": "priority",
-        "path": "{ModulePath}{LibraryPrefix}priority.{LibraryExtension}"
+        "path": "{ModuleDirectory}{LibraryPrefix}priority.{LibraryExtension}"
     },```
 5. You can then modify the workflow.json to use the priority task: ```
     "setPriority": {
