@@ -50,7 +50,7 @@ extern volatile uint32_t hashtable_seed;
 
 json_t *json_object(void)
 {
-    json_object_t *object = jsonp_malloc(sizeof(json_object_t));
+    json_object_t *object = (json_object_t *)jsonp_malloc(sizeof(json_object_t));
     if(!object)
         return NULL;
 
@@ -97,7 +97,7 @@ json_t *json_object_get(const json_t *json, const char *key)
         return NULL;
 
     object = json_to_object(json);
-    return hashtable_get(&object->hashtable, key);
+    return (json_t *)hashtable_get(&object->hashtable, key);
 }
 
 int json_object_set_new_nocheck(json_t *json, const char *key, json_t *value)
@@ -244,7 +244,7 @@ const char *json_object_iter_key(void *iter)
     if(!iter)
         return NULL;
 
-    return hashtable_iter_key(iter);
+    return (char *)hashtable_iter_key(iter);
 }
 
 json_t *json_object_iter_value(void *iter)
@@ -337,7 +337,7 @@ static json_t *json_object_deep_copy(const json_t *object)
 
 json_t *json_array(void)
 {
-    json_array_t *array = jsonp_malloc(sizeof(json_array_t));
+    json_array_t *array = (json_array_t *)jsonp_malloc(sizeof(json_array_t));
     if(!array)
         return NULL;
     json_init(&array->json, JSON_ARRAY);
@@ -345,7 +345,7 @@ json_t *json_array(void)
     array->entries = 0;
     array->size = 8;
 
-    array->table = jsonp_malloc(array->size * sizeof(json_t *));
+    array->table = (json_t **)jsonp_malloc(array->size * sizeof(json_t *));
     if(!array->table) {
         jsonp_free(array);
         return NULL;
@@ -440,7 +440,7 @@ static json_t **json_array_grow(json_array_t *array,
     old_table = array->table;
 
     new_size = max(array->size + amount, array->size * 2);
-    new_table = jsonp_malloc(new_size * sizeof(json_t *));
+    new_table = (json_t **)jsonp_malloc(new_size * sizeof(json_t *));
     if(!new_table)
         return NULL;
 
@@ -651,7 +651,7 @@ static json_t *string_create(const char *value, size_t len, int own)
             return NULL;
     }
 
-    string = jsonp_malloc(sizeof(json_string_t));
+    string = (json_string_t *)jsonp_malloc(sizeof(json_string_t));
     if(!string) {
         if(!own)
             jsonp_free(v);
@@ -793,7 +793,7 @@ static json_t *json_string_copy(const json_t *string)
 
 json_t *json_integer(json_int_t value)
 {
-    json_integer_t *integer = jsonp_malloc(sizeof(json_integer_t));
+    json_integer_t *integer = (json_integer_t *)jsonp_malloc(sizeof(json_integer_t));
     if(!integer)
         return NULL;
     json_init(&integer->json, JSON_INTEGER);
@@ -845,7 +845,7 @@ json_t *json_real(double value)
     if(isnan(value) || isinf(value))
         return NULL;
 
-    real = jsonp_malloc(sizeof(json_real_t));
+    real = (json_real_t *)jsonp_malloc(sizeof(json_real_t));
     if(!real)
         return NULL;
     json_init(&real->json, JSON_REAL);

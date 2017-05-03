@@ -381,7 +381,7 @@ static void lex_scan_string(lex_t *lex, json_error_t *error)
          - two \uXXXX escapes (length 12) forming an UTF-16 surrogate pair
            are converted to 4 bytes
     */
-    t = jsonp_malloc(lex->saved_text.length + 1);
+    t = (char *)jsonp_malloc(lex->saved_text.length + 1);
     if(!t) {
         /* this is not very nice, since TOKEN_INVALID is returned */
         goto out;
@@ -970,7 +970,7 @@ typedef struct
 static int buffer_get(void *data)
 {
     char c;
-    buffer_data_t *stream = data;
+    buffer_data_t *stream = (buffer_data_t *)data;
     if(stream->pos >= stream->len)
       return EOF;
 
@@ -1111,7 +1111,7 @@ typedef struct
 static int callback_get(void *data)
 {
     char c;
-    callback_data_t *stream = data;
+    callback_data_t *stream = (callback_data_t *)data;
 
     if(stream->pos >= stream->len) {
         stream->pos = 0;
