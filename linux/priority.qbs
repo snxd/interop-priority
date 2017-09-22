@@ -18,7 +18,6 @@ Product {
         condition: qbs.targetOS.contains("linux")
         cpp.includePaths: outer.concat([
             "/usr/include/",
-            "../jansson/",
             "../interop/",
             "../"
         ])
