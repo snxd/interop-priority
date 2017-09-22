@@ -1,4 +1,4 @@
-## Priority Interop Example
+## Priority Interop Example for DIRECT 5
 
 This is an example interop that shows how to change the priority of the current process.
 
