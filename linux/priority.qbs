@@ -21,16 +21,17 @@ Product {
             "../interop/",
             "../"
         ])
-        cpp.visibility: "hidden"
         cpp.linkerFlags: base.concat([
-            "-Wl,--retain-symbols-file=" + sourceDirectory + "/priority.def"
+            "--version-script=" + sourceDirectory + "/priority.map",
+            "--gc-sections"
         ])
+        cpp.separateDebugInformation: true
     }
 
     Group {
         name: "exports"
         files: [
-            "priority.def"
+            "priority.map"
         ]
     }
 
@@ -39,6 +40,7 @@ Product {
         prefix: "../"
         files: [
             "prioritytask.c",
+            "priorityinterop.c",
             "priorityinvoke.c"
         ]
     }
@@ -75,6 +77,11 @@ Product {
     Group {
         // Copy produced library to install root
         fileTagsFilter: "dynamiclibrary"
+        qbs.install: true
+    }
+    Group {
+        // Copy debug symbols to install root
+        fileTagsFilter: "debuginfo_dll"
         qbs.install: true
     }
 }
