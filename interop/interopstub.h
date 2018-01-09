@@ -13,9 +13,9 @@ extern "C" {
 
 /*********************************************************************/
 
-typedef int32 (*Interop_ExecuteCallback)(void* UserPtr, char *InstanceId, char *String, char *ResultString, int32 ResultStringLength);
+typedef int32 (*Interop_ExecuteCallback)(void* UserPtr, char *InstanceId, char *CallbackInfo, echandle ReturnDictionaryHandle);
 typedef int32 (*Interop_ReleaseInstanceCallback)(void** UserPtr);
-typedef int32 (*Interop_InvokeInstanceCallback)(void* UserPtr, char *String, char *ResultString, int32 ResultStringLength);
+typedef int32 (*Interop_InvokeInstanceCallback)(void* UserPtr, echandle MethodDictionaryHandle, echandle ReturnDictionaryHandle);
 typedef int32 (*Interop_ProcessInstanceCallback)(void* UserPtr);
 
 /*********************************************************************/
@@ -36,7 +36,7 @@ typedef int32 (*Interop_ProcessInstanceCallback)(void* UserPtr);
 int32 Interop_CreateInstance(char *TypeName, char *InstanceId, int32 InstanceIdLength, 
                              void *ExecuteUserPtr, Interop_ExecuteCallback Execute,
                              Interop_InvokeInstanceCallback *Invoke,
-                             Interop_ReleaseInstanceCallback *Remove,
+                             Interop_ReleaseInstanceCallback *Release,
                              Interop_ProcessInstanceCallback *Process,
                              void **UserPtr);
 

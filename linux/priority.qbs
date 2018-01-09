@@ -18,20 +18,20 @@ Product {
         condition: qbs.targetOS.contains("linux")
         cpp.includePaths: outer.concat([
             "/usr/include/",
-            "../jansson/",
             "../interop/",
             "../"
         ])
-        cpp.visibility: "hidden"
         cpp.linkerFlags: base.concat([
-            "-Wl,--retain-symbols-file=" + sourceDirectory + "/priority.def"
+            "--version-script=" + sourceDirectory + "/priority.map",
+            "--gc-sections"
         ])
+        cpp.separateDebugInformation: true
     }
 
     Group {
         name: "exports"
         files: [
-            "priority.def"
+            "priority.map"
         ]
     }
 
@@ -40,6 +40,7 @@ Product {
         prefix: "../"
         files: [
             "prioritytask.c",
+            "priorityinterop.c",
             "priorityinvoke.c"
         ]
     }
@@ -74,33 +75,13 @@ Product {
     }
 
     Group {
-        name: "jansson"
-        prefix: "../jansson/"
-        files: [
-            "dump.c",
-            "error.c",
-            "hashtable.h",
-            "hashtable.c",
-            "hashtable_seed.c",
-            "jansson.h",
-            "jansson_config.h",
-            "jansson_private.h",
-            "load.c",
-            "lookup3.h",
-            "memory.c",
-            "pack_unpack.c",
-            "strbuffer.h",
-            "strbuffer.c",
-            "strconv.c",
-            "utf.h",
-            "utf.c",
-            "value.c"
-        ]
-    }
-
-    Group {
         // Copy produced library to install root
         fileTagsFilter: "dynamiclibrary"
+        qbs.install: true
+    }
+    Group {
+        // Copy debug symbols to install root
+        fileTagsFilter: "debuginfo_dll"
         qbs.install: true
     }
 }

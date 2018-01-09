@@ -1,4 +1,4 @@
-## Priority Interop Example for DIRECT 5
+## Priority Interop Example for DIRECT 5.1.9
 
 This is an example interop that shows how to change the priority of the current process.
 
@@ -7,7 +7,6 @@ This is an example interop that shows how to change the priority of the current 
 * bin - Priority interop dlls
 * js/priority.js - Javascript priority object
 * interop - DIRECT interop headers
-* jansson - Jansson javascript parser
 * mac - Xcode project files
 * linux - QtCreator project files
 * windows - Windows project files
@@ -17,7 +16,7 @@ This is an example interop that shows how to change the priority of the current 
 * Visual Studio 2013
 * Xcode 8
 * QtCreator 5.8
-* DIRECT 5
+* DIRECT 5.1.9
 
 ### Setup Instructions
 

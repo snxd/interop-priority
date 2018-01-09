@@ -13,7 +13,7 @@ int32 Priority_SetLow(void);
 int32 Priority_SetNormal(void);
 int32 Priority_SetHigh(void);
 
-int32 Priority_Invoke(echandle PriorityHandle, char *String, char *ResultString, int32 ResultStringLength);
+int32 Priority_Invoke(echandle PriorityHandle, echandle MethodDictionaryHandle, echandle ReturnDictionaryHandle);
 
 /*********************************************************************/
 
