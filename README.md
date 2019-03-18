@@ -1,4 +1,4 @@
-## Priority Interop Example for DIRECT 5.1.9
+## Priority Interop Example for DIRECT 5.2
 
 This is an example interop that shows how to change the priority of the current process.
 
@@ -7,20 +7,42 @@ This is an example interop that shows how to change the priority of the current 
 * bin - Priority interop dlls
 * js/priority.js - Javascript priority object
 * interop - DIRECT interop headers
-* mac - Xcode project files
-* linux - QtCreator project files
-* windows - Windows project files
+* mac - Macintosh specific files
+* linux - Linux specific files
+* windows - Windows specific files
 
 ### Requirements
 
-* Visual Studio 2013
-* Xcode 8
-* QtCreator 5.8
-* DIRECT 5.1.9
+* CMake 2.8
+
+### Build Instructions
+
+CMake is a makefile generator that produces solutions and project files for various compiler toolkits. 
+
+#### Visual Studio
+
+```
+cmake .
+cmake --build . --config Debug
+```
+
+#### Xcode
+
+```
+cmake . -G Xcode
+cmake --build . --config Debug
+```
+
+#### Unix Makefiles
+
+```
+cmake . -DCMAKE_BUILD_TYPE=Debug
+cmake --build .
+```
 
 ### Setup Instructions
 
-1. Compile the solution
+1. Compile the solution or project for your platform
 2. Copy the dynamic library from the target directory to the host.exe directory
 3. Edit workflow.json and add the following task to be run in the load entry point: ```
     "loadPriority": {
@@ -39,12 +61,12 @@ This is an example interop that shows how to change the priority of the current 
         "type": "priority",
         "level": "low"
     }```
-5. Copy simpleobject.js and simpleobjecttest.js from the js directory to the skin directory
+5. Copy priority.js from the js directory to the skin directory
 6. Open main.html and insert the following scripts after main.js: ```
     <script src="priority.js" type="text/javascript"></script>```
 7. You can then modify main.js to wait for the interop to load before setting the process level: ```
-    interop.on("libraryLoad", function(info) {
-        if (info.name.toLowerCase() == "priority") {
+    interop.on("load", function(info) {
+        if (info.name == "priority") {
             window.priority.setLow();
         }
     });```

@@ -56,13 +56,13 @@
     /** Global instance of Priority created when interop loaded
      *  @type Priority
      */
-    interop.on("libraryLoad", function(info) {
-        if (info.name.toLowerCase() == "priority") {
+    interop.on("load", function(info) {
+        if (info.name == "priority") {
             root.priority = createPriority();
         }
     });
-    interop.on("libraryUnload", function(info) {
-        if (info.name.toLowerCase() == "priority") {
+    interop.on("unload", function(info) {
+        if (info.name == "priority") {
             root.priority.release();
             root.priority = null;
         }
