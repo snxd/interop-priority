@@ -3,13 +3,13 @@
 #ifndef _INTEROPLIB_H_
 #define _INTEROPLIB_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /*********************************************************************/
 
@@ -57,7 +57,7 @@ typedef struct ClassStruct
 #define Class_InstanceId(CLASS)                 (((ClassStruct *)(CLASS))->InstanceId)
 #define Class_Define(TYPE, ID)                  static int32 Global##TYPE##ClassId = ID;
 #define Class_Cast(HANDLE, TYPE)                ((TYPE *)(HANDLE))
-#define Class_VtblCast(PTR, VTBLTYPE)           ((VTBLTYPE *)((uint8 *)PTR + sizeof(ClassStruct)))
+#define Class_VtblCast(PTR, VTBLTYPE)           (*(VTBLTYPE **)((uint8 *)PTR + sizeof(ClassStruct)))
 
 /*********************************************************************/
 
