@@ -24,15 +24,20 @@ elseif(UNIX)
 endif()
 
 if(WIN32)
+    set(CMAKE_C_FLAGS_DEBUG "/MTd")
+    set(CMAKE_C_FLAGS_RELEASE "/MT")
+    set(CMAKE_C_FLAGS_MINSIZEREL "/MT")
+    set(CMAKE_C_FLAGS_RELWITHDEBINFO "/MT")
+
     set(CMAKE_SHARED_LINKER_FLAGS
         "${CMAKE_MODULE_LINKER_FLAGS} \"/DEF:${CMAKE_CURRENT_SOURCE_DIR}/windows/priority.def\"")
 elseif(APPLE)
     set(CMAKE_XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE
         "${CMAKE_CURRENT_SOURCE_DIR}/mac/priority.def")
 elseif(UNIX)
-    set(CMAKE_SHARED_LINKER_FLAGS 
+    set(CMAKE_SHARED_LINKER_FLAGS
         "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/linux/priority.def")
-    set(CMAKE_SHARED_LINKER_FLAGS 
+    set(CMAKE_SHARED_LINKER_FLAGS
         "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections")
 endif()
 
