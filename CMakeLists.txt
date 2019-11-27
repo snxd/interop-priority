@@ -44,4 +44,7 @@ endif()
 project(priority C)
 
 add_library(${PROJECT_NAME} SHARED ${PRIORITY_SRC} ${PRIORITY_HEADERS})
+set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(${PROJECT_NAME} interoplib)
+
+
