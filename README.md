@@ -1,8 +1,8 @@
-## Priority Interop Example for DIRECT 5.2
+## Priority Interop Example for DIRECT 6.0
 
 This is an example interop that shows how to change the priority of the current process.
 
-### Contents 
+### Contents
 
 * bin - Priority interop dlls
 * js/priority.js - Javascript priority object
@@ -17,7 +17,7 @@ This is an example interop that shows how to change the priority of the current 
 
 ### Build Instructions
 
-CMake is a makefile generator that produces solutions and project files for various compiler toolkits. 
+CMake is a makefile generator that produces solutions and project files for various compiler toolkits.
 
 #### Visual Studio
 
@@ -71,4 +71,3 @@ cmake --build .
         }
     });```
 8. Run host.exe with --disablesecurity as the first argument (during production if you sign the dll you won't need this).
-
