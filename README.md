@@ -1,4 +1,4 @@
-## Priority Interop Example for DIRECT 6.0
+## Priority Interop Example for DIRECT 6.1
 
 This is an example interop that shows how to change the priority of the current process.
 
@@ -7,7 +7,7 @@ This is an example interop that shows how to change the priority of the current 
 * bin - Priority interop dlls
 * js/priority.js - Javascript priority object
 * interop - DIRECT interop headers
-* mac - Macintosh specific files
+* mac - macOS specific files
 * linux - Linux specific files
 * windows - Windows specific files
 
